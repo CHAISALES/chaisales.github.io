@@ -15,6 +15,7 @@ A Coruja Criativa Tech ajuda instituições de ensino a transformar atendimento 
 - Mentoria para gestores: Acompanhamento estratégico para diretores e mantenedores que querem decidir com dados e método.
 
 ## Produtos
+- [Raio-X Digital](https://corujacriativatech.com.br/raio-x/): diagnóstico online do atendimento e da rematrícula, com relatório por e-mail.
 - [Ebook Da mensagem à matrícula](https://chaisales.github.io/ebook/): guia prático (R$ 27) para escolas pararem de perder famílias entre a primeira mensagem e a matrícula.
 
 ## Artigos

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /raio-x/questionario/
 
 Sitemap: https://corujacriativatech.com.br/sitemap.xml
