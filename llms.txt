@@ -10,17 +10,19 @@ A Coruja Criativa Tech ajuda instituições de ensino a transformar atendimento 
 - Customer Success e rematrícula: Transformamos retenção em rotina: acompanhamento das famílias, radar de risco e campanha de rematrícula.
 - IA, CRM e automação no atendimento: Implantamos CRM e automações no WhatsApp com inteligência artificial, sem perder o toque humano.
 - Treinamento de equipes: Formação prática para secretaria, comercial e coordenação, com olhar pedagógico e foco em resolver, não só responder.
+- Formação de professores em práticas inclusivas: Formação conduzida por psicopedagoga com mais de 30 anos de educação, para equipes que querem incluir de verdade, com método e acolhimento.
+- Atendimento à família com olhar psicopedagógico: Preparamos secretaria, comercial e coordenação para acolher famílias de alunos com dificuldades de aprendizagem, do primeiro contato ao acompanhamento.
 - Mentoria para gestores: Acompanhamento estratégico para diretores e mantenedores que querem decidir com dados e método.
 
 ## Produtos
 - [Ebook Da mensagem à matrícula](https://chaisales.github.io/ebook/): guia prático (R$ 27) para escolas pararem de perder famílias entre a primeira mensagem e a matrícula.
 
 ## Artigos
-- [Rematrícula é a nova captação: o que a queda de matrículas diz para escolas particulares](https://chaisales.github.io/blog/rematricula-e-a-nova-captacao/): O Censo Escolar 2025 mostrou menos alunos na educação básica privada. Para quem gere escola, isso muda a conta: cada família que fica vale mais do que nunca.
-- [Sua escola aparece quando a família pergunta para a IA?](https://chaisales.github.io/blog/sua-escola-aparece-na-ia/): As famílias já pesquisam escola no Instagram, no TikTok e em assistentes de IA. Entenda o que é GEO e como preparar a presença digital da sua instituição.
-- [Agente de IA no WhatsApp: vale a pena para escolas e cursos?](https://chaisales.github.io/blog/agente-de-ia-no-whatsapp-para-escolas/): Grandes grupos educacionais já usam agentes de IA para atender e qualificar interessados. O que isso significa para instituições de médio e pequeno porte, e por onde começar.
-- [Por que as famílias trocam de escola (e quase nunca é só o preço)](https://chaisales.github.io/blog/por-que-familias-trocam-de-escola/): Pesquisas mostram que percepção de aprendizado e qualidade da relação pesam tanto quanto o valor da mensalidade. O que a gestão pode fazer com isso.
-- [Pais millennials, alunos da geração Z, filhos da geração Alpha: o que muda no atendimento da sua escola](https://chaisales.github.io/blog/pais-millennials-alunos-z-filhos-alpha/): Escola é um dos poucos negócios que atendem várias gerações ao mesmo tempo. Entender cada uma delas muda a forma de captar, atender e reter.
+- [Rematrícula é a nova captação: o que a queda de matrículas diz para escolas particulares](https://corujacriativatech.com.br/blog/rematricula-e-a-nova-captacao/): O Censo Escolar 2025 mostrou menos alunos na educação básica privada. Para quem gere escola, isso muda a conta: cada família que fica vale mais do que nunca.
+- [Sua escola aparece quando a família pergunta para a IA?](https://corujacriativatech.com.br/blog/sua-escola-aparece-na-ia/): As famílias já pesquisam escola no Instagram, no TikTok e em assistentes de IA. Entenda o que é GEO e como preparar a presença digital da sua instituição.
+- [Agente de IA no WhatsApp: vale a pena para escolas e cursos?](https://corujacriativatech.com.br/blog/agente-de-ia-no-whatsapp-para-escolas/): Grandes grupos educacionais já usam agentes de IA para atender e qualificar interessados. O que isso significa para instituições de médio e pequeno porte, e por onde começar.
+- [Por que as famílias trocam de escola (e quase nunca é só o preço)](https://corujacriativatech.com.br/blog/por-que-familias-trocam-de-escola/): Pesquisas mostram que percepção de aprendizado e qualidade da relação pesam tanto quanto o valor da mensalidade. O que a gestão pode fazer com isso.
+- [Pais millennials, alunos da geração Z, filhos da geração Alpha: o que muda no atendimento da sua escola](https://corujacriativatech.com.br/blog/pais-millennials-alunos-z-filhos-alpha/): Escola é um dos poucos negócios que atendem várias gerações ao mesmo tempo. Entender cada uma delas muda a forma de captar, atender e reter.
 
 ## Contato
 - WhatsApp: +55 81 99945-5944
