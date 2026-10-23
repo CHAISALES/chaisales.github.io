@@ -1,0 +1,83 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif;background:#071C24;color:#EAF4F5}
+.scene{position:absolute;inset:0;opacity:0;display:flex;flex-direction:column}
+.big{font-family:'Inter Display',Inter;font-weight:900;letter-spacing:-.02em;line-height:1.05}
+.c{color:#38D9F0}
+.tag{position:absolute;top:120px;left:80px;font-size:30px;font-weight:700;letter-spacing:.08em;color:#9EC7CE;text-transform:uppercase}
+.foot{position:absolute;bottom:110px;left:80px;right:80px;display:flex;align-items:center;gap:18px;font-size:30px;color:#9EC7CE}
+.foot img{width:56px}
+/* phone chat */
+.chat{position:absolute;left:90px;right:90px;top:330px;bottom:430px;background:#0B141A;border-radius:48px;overflow:hidden;border:3px solid #1C4A55;display:flex;flex-direction:column}
+.hdr{background:#1F2C34;padding:34px 40px;display:flex;align-items:center;gap:24px}
+.av{width:78px;height:78px;border-radius:50%;background:#3F6670;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:34px}
+.hn{font-size:38px;font-weight:700} .hs{font-size:26px;color:#8FA9B0;margin-top:4px}
+.body{flex:1;padding:40px;display:flex;flex-direction:column;gap:26px;background:#0B141A}
+.b{max-width:80%;padding:24px 30px 40px;border-radius:26px;font-size:36px;line-height:1.35;position:relative;opacity:0;transform:translateY(20px)}
+.b .t{position:absolute;right:22px;bottom:10px;font-size:22px;color:#9DB3B9}
+.me{align-self:flex-end;background:#005C4B}
+.them{align-self:flex-start;background:#1F2C34}
+.pdf{display:flex;gap:18px;align-items:center;background:#16232B;border-radius:16px;padding:18px;margin-bottom:12px;font-size:30px}
+.pdf i{display:inline-block;width:56px;height:68px;background:#E5534B;border-radius:8px;font-style:normal;font-size:20px;font-weight:800;color:#fff;text-align:center;line-height:68px}
+.typing{align-self:flex-start;background:#1F2C34;border-radius:26px;padding:26px 34px;font-size:40px;letter-spacing:6px;opacity:0}
+.jump{align-self:center;background:#38D9F0;color:#071C24;font-weight:800;font-size:34px;padding:14px 30px;border-radius:40px;opacity:0}
+.cap{position:absolute;left:80px;right:80px;bottom:250px;text-align:center;font-size:58px;opacity:0}
+.sim{position:absolute;top:220px;left:0;right:0;text-align:center;font-size:26px;color:#7FA3AA;letter-spacing:.06em}
+
+.list{display:flex;flex-direction:column;gap:34px;margin-top:60px}
+.li{font-size:62px;font-weight:700;opacity:0;transform:translateY(20px);display:flex;gap:26px;align-items:flex-start}
+.li b{color:#38D9F0}
+.lbl{font-size:30px;font-weight:800;letter-spacing:.08em;margin:0 0 10px 6px;opacity:0}
+</style></head><body>
+<div class="scene" id="s1" style="justify-content:center;padding:0 90px">
+  <div style="font-size:40px;font-weight:800;letter-spacing:.1em;color:#38D9F0;margin-bottom:40px">LEIA DE NOVO · 01</div>
+  <div class="big" style="font-size:112px">Muita escola <span class="c">riria</span> dessa mensagem.</div>
+  <div style="font-size:54px;margin-top:50px;color:#C9E2E6">Leia de novo. 👇</div>
+</div>
+<div class="scene" id="s2">
+  <div class="tag">WhatsApp da escola</div><div class="sim">SIMULAÇÃO BASEADA EM SITUAÇÕES REAIS</div>
+  <div class="chat"><div class="hdr"><div class="av">M</div><div><div class="hn">Mãe do Pedro</div><div class="hs">online</div></div></div>
+    <div class="body">
+      <div class="b them" id="a1">Boa noite, professora! O Pedro chegou com um arranhão no braço. Alguém viu o que aconteceu? 😟<span class="t">21:48</span></div>
+      <div class="b them" id="a2">Ele não quis falar sobre isso no jantar.<span class="t">21:49</span></div>
+    </div></div>
+  <div class="cap big" id="ac">"Mãe exagerada"?</div>
+</div>
+<div class="scene" id="s3" style="justify-content:center;padding:0 90px">
+  <div class="big" style="font-size:84px">O que ela está perguntando <span class="c">de verdade:</span></div>
+  <div class="list">
+    <div class="li" id="l1"><b>1.</b> Meu filho está seguro aí?</div>
+    <div class="li" id="l2"><b>2.</b> Alguém olha por ele?</div>
+    <div class="li" id="l3"><b>3.</b> Posso confiar em vocês?</div>
+  </div>
+</div>
+<div class="scene" id="s4">
+  <div class="tag">Duas respostas possíveis</div>
+  <div class="chat" style="top:230px;bottom:330px"><div class="hdr"><div class="av" style="background:#1F8F9C">E</div><div><div class="hn">Escola</div><div class="hs">online</div></div></div>
+    <div class="body">
+      <div class="lbl" id="xl" style="color:#E5534B">✗ RESPONDEU</div>
+      <div class="b them" id="x1" style="margin-top:-14px">Mãe, são 24 alunos na sala, não temos como ver tudo.<span class="t">22:30</span></div>
+      <div class="lbl" id="ol" style="color:#38D9F0;margin-top:20px">✓ RESOLVEU</div>
+      <div class="b them" id="o1" style="margin-top:-14px">Boa noite! Obrigada por avisar 💙 Amanhã cedo converso com a professora e com o Pedro, e te retorno até as 10h.<span class="t">21:55</span></div>
+    </div></div>
+</div>
+<div class="scene" id="s5" style="justify-content:center;padding:0 90px">
+  <div class="big" style="font-size:100px">Pedido "absurdo" é pedido de <span class="c">confiança</span> mal formulado.</div>
+  <div class="big" style="font-size:72px;margin-top:60px;color:#C9E2E6;opacity:0" id="s5b">Escola que ri da família, perde a família.</div>
+</div>
+<div class="scene" id="s6" style="justify-content:center;padding:0 90px">
+  <div class="big" style="font-size:96px">Atender não é resolver.<br><span class="c">Escola que resolve, matricula.</span></div>
+  <div style="margin-top:80px;font-size:46px;line-height:1.4;color:#C9E2E6" id="s6b">Descubra onde a sua escola perde famílias:<br><b style="color:#EAF4F5">Raio-X Digital</b> · link na bio</div>
+</div><div class="foot"><img src="logo.png"><span><b style="color:#EAF4F5">Coruja Criativa Tech</b> · Atender não é resolver</span></div><script>
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
+function fade(id,a,b,t,dur=.35){const e=document.getElementById(id); let o=0; if(t>=a&&t<b){o=Math.min(ease((t-a)/dur), ease((b-t)/dur));} e.style.opacity=o;}
+function pop(id,a,t){const e=document.getElementById(id);const p=ease((t-a)/.35);e.style.opacity=p;e.style.transform=`translateY(${(1-p)*20}px)`;}
+window.render=function(t){
+ fade('s1',0,3.4,t); fade('s2',3.4,10.4,t); fade('s3',10.4,16.6,t); fade('s4',16.6,24.4,t); fade('s5',24.4,29.4,t); fade('s6',29.4,34,t,.4);
+ pop('a1',3.8,t); pop('a2',5.4,t); pop('ac',7.4,t);
+ pop('l1',11.6,t); pop('l2',12.9,t); pop('l3',14.2,t);
+ pop('xl',17.0,t); pop('x1',17.2,t); pop('ol',20.0,t); pop('o1',20.2,t);
+ pop('s5b',26.6,t); pop('s6b',30.6,t);
+};
+render(0);
+</script></body></html>
