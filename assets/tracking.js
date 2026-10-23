@@ -4,9 +4,9 @@
    - LGPD: GA4 roda em modo de consentimento (sem cookies até a pessoa aceitar); Pixel e Clarity só depois do aceite. */
 (function () {
   var C = {
-    ga4: '',      // ex.: 'G-XXXXXXXXXX'  (Google Analytics 4)
-    pixel: '',    // ex.: '123456789012345' (Meta Pixel)
-    clarity: ''   // ex.: 'abcd1234ef'      (Microsoft Clarity)
+    ga4: 'G-YEMWD6RY9T',      // ex.: 'G-XXXXXXXXXX'  (Google Analytics 4)
+    pixel: '1422703696346136',    // ex.: '123456789012345' (Meta Pixel)
+    clarity: 'z1zgwv0edg'   // ex.: 'abcd1234ef'      (Microsoft Clarity)
   };
   var RAIOX = { currency: 'BRL', value: 97, items: [{ item_id: 'raio-x-digital', item_name: 'Raio-X Digital', price: 97 }] };
 
