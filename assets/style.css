@@ -152,6 +152,7 @@ footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
 footer h4{color:var(--cream);font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
 footer a{color:var(--soft);text-decoration:none;display:block;margin-bottom:8px}
 footer a:hover{color:var(--cyan)}
+footer .legal a{display:inline;margin:0}
 footer .legal{margin-top:36px;padding-top:20px;border-top:1px solid #12404C;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media (max-width:760px){footer .cols{grid-template-columns:1fr}}
 
