@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="robots" content="noindex,nofollow">
+<title>Painel da Escola · Coruja Criativa Tech</title>
+<meta name="description" content="Área das escolas parceiras da Coruja Criativa Tech: Raio-X, Selo Escola que Resolve e arquivos.">
+<link rel="canonical" href="https://corujacriativatech.com.br/painel/">
+<link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#071C24">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Coruja Criativa Tech">
+<meta property="og:title" content="Painel da Escola · Coruja Criativa Tech"><meta property="og:description" content="Área das escolas parceiras da Coruja Criativa Tech: Raio-X, Selo Escola que Resolve e arquivos.">
+<meta property="og:url" content="https://corujacriativatech.com.br/painel/"><meta property="og:image" content="https://corujacriativatech.com.br/assets/og.jpg">
+<meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="alternate" type="application/rss+xml" title="Blog Coruja Criativa Tech" href="/blog/feed.xml">
+
+<script src="/assets/tracking.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Coruja Criativa Tech", "description": "Consultoria de gestão estratégica de negócios com olhar pedagógico: comercial, experiência do cliente, retenção, CRM e IA para escolas, cursos livres e escolas de idiomas.", "url": "https://corujacriativatech.com.br/", "logo": "https://corujacriativatech.com.br/assets/logo.png", "image": "https://corujacriativatech.com.br/assets/og.jpg", "telephone": "+55-81-99945-5944", "founder": {"@type": "Person", "name": "Chaiane Sales Vicente", "sameAs": ["https://www.linkedin.com/in/chaianesales/", "https://www.instagram.com/chaisalesvicente/"]}, "employee": [{"@type": "Person", "name": "Gilcleide Vicente Sales", "jobTitle": "Professora e psicopedagoga, responsável pedagógica", "knowsAbout": ["psicopedagogia", "educação inclusiva", "educação especial", "coordenação pedagógica", "formação de professores"], "sameAs": ["https://www.linkedin.com/in/gilcleide-vicente-s-401436223/", "https://www.instagram.com/gilcleidevs/"]}], "areaServed": {"@type": "Country", "name": "Brasil"}, "address": {"@type": "PostalAddress", "addressLocality": "Camaragibe", "addressRegion": "PE", "addressCountry": "BR"}, "knowsAbout": ["captação de alunos", "rematrícula", "experiência do cliente", "customer success", "CRM educacional", "inteligência artificial no atendimento", "gestão escolar"], "sameAs": ["https://www.instagram.com/chaisalesvicente/", "https://www.linkedin.com/in/chaianesales/", "https://www.google.com/maps/place/Coruja+Criativa+Tech/@-8.0112617,-34.978105,17z"], "slogan": "Gestão estratégica de negócios com olhar pedagógico"}</script>
+</head><body><header class="top"><div class="wrap">
+<a class="brand" href="/"><img src="/assets/logo.webp" alt="" width="34" height="45"><span>Coruja Criativa Tech<small>por Chaiane Sales Vicente</small></span></a>
+<button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="const m=document.querySelector('nav.menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">☰</button>
+<nav class="menu" aria-label="Principal"><a href="/">Início</a><a href="/raio-x/">Raio-X</a><a href="/selo/">Selo</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="https://chaisales.github.io/ebook/" target="_blank" rel="noopener">Ebook</a><a class="btn" href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende uma conversa</a></nav>
+</div></header><main><style>
+.pn{max-width:980px;margin:0 auto}
+.pn-card{background:var(--white);border:1px solid var(--soft);border-radius:var(--radius);padding:28px}
+.pn-login{max-width:460px;margin:0 auto}
+.pn-login label{display:block;font-weight:700;margin-top:16px}
+.pn-login input{width:100%;margin-top:8px;padding:14px 16px;border:1.5px solid var(--soft);border-radius:12px;font:inherit}
+.pn-login input:focus{outline:2px solid var(--cyan);border-color:var(--teal)}
+.pn-code{letter-spacing:.5em;font-size:24px;text-align:center}
+.pn-msg{min-height:24px;margin-top:12px;color:var(--muted);font-size:15px}
+.pn-msg.err{color:#B03A2E}
+.pn-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.pn-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
+.pn-tabs button{border:1.5px solid var(--soft);background:var(--white);color:var(--ink);padding:10px 18px;border-radius:999px;font:600 15px var(--text);cursor:pointer}
+.pn-tabs button[aria-selected=true]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.pn-score{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.pn-big{font-family:var(--display);font-weight:900;font-size:72px;line-height:1;color:var(--ink)}
+.pn-pill{display:inline-block;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:800;color:#fff}
+.pn-bar{height:10px;background:var(--soft);border-radius:6px;overflow:hidden;margin:6px 0 14px}
+.pn-bar i{display:block;height:100%;border-radius:6px}
+.pn-row{display:flex;justify-content:space-between;font-weight:600;font-size:15px}
+.pn-hist{display:flex;gap:10px;align-items:flex-end;height:120px;margin-top:10px}
+.pn-hist div{flex:1;max-width:60px;background:var(--teal);border-radius:8px 8px 0 0;position:relative}
+.pn-hist span{position:absolute;top:-22px;left:0;right:0;text-align:center;font-size:13px;font-weight:700}
+.pn-hist small{position:absolute;bottom:-22px;left:0;right:0;text-align:center;font-size:11px;color:var(--muted)}
+.pn-steps{list-style:none;padding:0;margin:0}
+.pn-steps li{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--soft)}
+.pn-dot{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;font-size:14px;background:var(--soft);color:var(--muted)}
+.pn-dot.ok{background:var(--teal);color:#fff}.pn-dot.run{background:var(--cyan);color:var(--ink)}
+.pn-steps b{flex:1}
+.pn-files{list-style:none;padding:0;margin:18px 0 0}
+.pn-files li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--soft);font-size:15px}
+.pn-files small{color:var(--muted)}
+.pn-up label{display:block;font-weight:700;margin-top:14px}
+.pn-up select,.pn-up input[type=file]{display:block;margin-top:8px;font:inherit;max-width:100%}
+.pn-check{display:flex;gap:10px;align-items:flex-start;font-weight:400!important;font-size:15px;background:var(--cream);padding:12px 14px;border-radius:12px}
+.pn-actions li{margin-bottom:10px}
+.pn-actions small{display:block;color:var(--muted)}
+.pn-empty{color:var(--muted)}
+[hidden]{display:none!important}
+.btn.pn-out{background:var(--white);color:var(--ink)!important;border:1.5px solid var(--soft)}
+.btn.pn-out:hover{border-color:var(--teal);box-shadow:none}
+#pn-hello{overflow-wrap:anywhere}
+@media(max-width:640px){.pn-card{padding:20px}.pn-big{font-size:56px}}
+</style>
+<section><div class="wrap pn">
+<div id="pn-off" class="pn-card pn-login" hidden><div class="kicker">Painel da Escola</div><h1 style="font-size:32px">Em implantação</h1><p class="lead" style="margin-top:10px">O painel das escolas parceiras abre em breve. Dúvidas: <a href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">fale com a Coruja</a>.</p></div>
+
+<div id="pn-login" class="pn-card pn-login">
+  <div class="kicker">Painel da Escola</div>
+  <h1 style="font-size:32px">Entrar</h1>
+  <p style="color:var(--muted);margin-top:8px">Sem senha: enviamos um código de 6 dígitos para o e-mail cadastrado da escola ou usado na compra do Raio-X.</p>
+  <form id="pn-f1" autocomplete="on">
+    <label for="pn-email">E-mail</label>
+    <input id="pn-email" type="email" maxlength="200" required autocomplete="email" inputmode="email">
+    <button class="btn" style="margin-top:18px;width:100%;justify-content:center" type="submit">Enviar código</button>
+  </form>
+  <form id="pn-f2" hidden>
+    <label for="pn-code">Código recebido por e-mail</label>
+    <input id="pn-code" class="pn-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required autocomplete="one-time-code">
+    <button class="btn" style="margin-top:18px;width:100%;justify-content:center" type="submit">Entrar</button>
+    <button class="btn pn-out" id="pn-back" type="button" style="margin-top:10px;width:100%;justify-content:center">Usar outro e-mail</button>
+  </form>
+  <p class="pn-msg" id="pn-m1" role="status" aria-live="polite"></p>
+  <p style="font-size:13px;color:var(--muted);margin-top:14px">A Coruja nunca pede senha ou código por WhatsApp. <a href="/privacidade/">Privacidade</a> · <a href="/termos/">Termos</a></p>
+</div>
+
+<div id="pn-app" hidden>
+  <div class="pn-top">
+    <div><div class="kicker">Painel da Escola</div><h1 style="font-size:clamp(28px,4vw,40px)" id="pn-hello">Olá</h1></div>
+    <button class="btn pn-out" id="pn-sair" type="button">Sair</button>
+  </div>
+  <div class="pn-tabs" role="tablist">
+    <button role="tab" data-t="raiox" aria-selected="true">Raio-X</button>
+    <button role="tab" data-t="selo" aria-selected="false">Selo</button>
+    <button role="tab" data-t="arq" aria-selected="false">Arquivos</button>
+    <button role="tab" data-t="mat" aria-selected="false">Materiais</button>
+  </div>
+
+  <div class="pn-card" data-p="raiox">
+    <div id="rx-none" hidden><h2>Sua escola ainda não tem Raio-X</h2><p class="pn-empty" style="margin-top:8px">Em 15 minutos você descobre onde a escola perde famílias e recebe 5 ações para a semana.</p><a class="btn" href="/raio-x/" style="margin-top:16px">Conhecer o Raio-X</a></div>
+    <div id="rx-yes" hidden>
+      <div class="pn-score"><div><div class="pn-big" id="rx-geral"></div><span class="pn-pill" id="rx-nivel"></span></div><p style="color:var(--muted);max-width:420px" id="rx-data"></p></div>
+      <h3 style="margin-top:26px">Notas por área</h3><div id="rx-areas" style="margin-top:12px"></div>
+      <h3 style="margin-top:20px">Ações prioritárias</h3><ol class="pn-actions" id="rx-acoes" style="margin-top:10px;padding-left:20px"></ol>
+      <div id="rx-evo" hidden><h3 style="margin-top:20px">Evolução</h3><div class="pn-hist" id="rx-hist" style="margin-bottom:30px"></div></div>
+      <a class="btn pn-out" href="/raio-x/" style="margin-top:8px">Fazer um novo Raio-X</a>
+    </div>
+  </div>
+
+  <div class="pn-card" data-p="selo" hidden>
+    <div id="se-none" hidden><h2>Selo Escola que Resolve</h2><p class="pn-empty" style="margin-top:8px">Sua escola ainda não está na turma piloto. O selo não se compra: se conquista, por cliente oculto, pesquisa com famílias e revisão pedagógica.</p><a class="btn" href="/selo/" style="margin-top:16px">Ver critérios</a></div>
+    <div id="se-yes" hidden><h2>Sua avaliação do Selo</h2><p class="pn-empty" id="se-msg" style="margin-top:8px"></p><ul class="pn-steps" id="se-steps" style="margin-top:12px"></ul><p id="se-nota" style="margin-top:16px;font-weight:700"></p></div>
+  </div>
+
+  <div class="pn-card" data-p="arq" hidden>
+    <h2>Arquivos da escola</h2>
+    <p class="pn-empty" style="margin-top:8px">Envie evidências para o Selo ou materiais que a Coruja pediu. PDF, JPG ou PNG, até 5 MB. Os arquivos ficam em pasta privada; só a Coruja acessa.</p>
+    <form class="pn-up" id="pn-up">
+      <label for="up-cat">Tipo de arquivo</label><select id="up-cat"></select>
+      <label for="up-file">Arquivo</label><input id="up-file" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" required>
+      <label class="pn-check"><input type="checkbox" id="up-ok" required><span>Confirmo que tarjei nomes, rostos, telefones e qualquer dado de alunos e famílias antes de enviar.</span></label>
+      <button class="btn" type="submit" style="margin-top:16px">Enviar arquivo</button>
+      <p class="pn-msg" id="up-m" role="status" aria-live="polite"></p>
+    </form>
+    <ul class="pn-files" id="up-list"></ul>
+  </div>
+
+  <div class="pn-card" data-p="mat" hidden>
+    <h2>Materiais</h2>
+    <ul style="margin-top:12px;padding-left:20px">
+      <li><a href="/loja/">Loja Coruja</a>: kits de prompts e materiais prontos para a equipe.</li>
+      <li><a href="https://chaisales.github.io/ebook/" target="_blank" rel="noopener">Guia Da mensagem à matrícula</a>: sete capítulos com exercícios e modelos.</li>
+      <li><a href="/blog/">Blog</a>: artigos para gestores.</li>
+      <li><a href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">Falar com a Coruja no WhatsApp</a></li>
+    </ul>
+  </div>
+</div>
+</div></section>
+<script>
+(function(){
+var API='https://script.google.com/macros/s/AKfycbyduVRH4daYFbMGZuN2mKr4QH2huPtu8GgF9hZtKVbg_xD7nIkmy-o-H3uUFGtbL4tJ/exec';if(!API)return;
+var K='coruja-painel',tok=null,email='';
+function g(id){return document.getElementById(id)}
+function st(k,v){try{if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}}
+function ld(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function msg(el,t,err){el.textContent=t;el.className='pn-msg'+(err?' err':'')}
+function call(o){return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(o)}).then(function(r){return r.json()})}
+function el(tag,txt,cls){var e=document.createElement(tag);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
+function cor(n){return n>=80?'#1E8449':n>=60?'#2E86AB':n>=40?'#E67E22':'#C0392B'}
+function dt(s){var d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('pt-BR')}
+var ERR={email:'Confira o e-mail.',limite:'Muitas tentativas. Aguarde alguns minutos e tente de novo.',codigo:'Código inválido ou vencido. Peça um novo.'};
+g('pn-f1').addEventListener('submit',function(ev){ev.preventDefault();email=g('pn-email').value.trim().toLowerCase();var b=ev.target.querySelector('button');b.disabled=true;msg(g('pn-m1'),'Enviando...');
+ call({acao:'codigo',email:email}).then(function(r){b.disabled=false;if(!r.ok){msg(g('pn-m1'),ERR[r.erro]||'Não foi possível agora. Tente de novo.',1);return}
+  g('pn-f1').hidden=true;g('pn-f2').hidden=false;g('pn-code').focus();msg(g('pn-m1'),'Se este e-mail tiver acesso ao painel, o código chega em instantes. Confira também o spam.')})
+ .catch(function(){b.disabled=false;msg(g('pn-m1'),'Sem conexão. Tente de novo.',1)})});
+g('pn-back').addEventListener('click',function(){g('pn-f2').hidden=true;g('pn-f1').hidden=false;msg(g('pn-m1'),'')});
+g('pn-f2').addEventListener('submit',function(ev){ev.preventDefault();var b=ev.target.querySelector('button');b.disabled=true;
+ call({acao:'entrar',email:email,codigo:g('pn-code').value}).then(function(r){b.disabled=false;if(!r.ok){msg(g('pn-m1'),ERR[r.erro]||ERR.codigo,1);return}tok=r.token;st(K,tok);carregar()})
+ .catch(function(){b.disabled=false;msg(g('pn-m1'),'Sem conexão. Tente de novo.',1)})});
+g('pn-sair').addEventListener('click',function(){tok=null;st(K,null);location.reload()});
+document.querySelectorAll('.pn-tabs button').forEach(function(bt){bt.addEventListener('click',function(){
+ document.querySelectorAll('.pn-tabs button').forEach(function(x){x.setAttribute('aria-selected',x===bt?'true':'false')});
+ document.querySelectorAll('[data-p]').forEach(function(p){p.hidden=p.getAttribute('data-p')!==bt.getAttribute('data-t')})})});
+function render(d){
+ g('pn-login').hidden=true;g('pn-app').hidden=false;g('pn-hello').textContent='Olá, '+(d.escola||d.email);
+ var rx=d.raiox||[];g('rx-none').hidden=rx.length>0;g('rx-yes').hidden=rx.length===0;
+ if(rx.length){var u=rx[rx.length-1];g('rx-geral').textContent=u.geral;var nv=g('rx-nivel');nv.textContent=u.nivel;nv.style.background=cor(u.geral);
+  g('rx-data').textContent='Último Raio-X em '+dt(u.data)+(u.instituicao?' · '+u.instituicao:'')+'. O relatório completo está no seu e-mail.';
+  var A=g('rx-areas');A.textContent='';u.areas.forEach(function(a){var r=el('div',null,'pn-row');r.appendChild(el('span',a.nome));r.appendChild(el('span',String(a.nota)));A.appendChild(r);var b=el('div',null,'pn-bar'),i=el('i');i.style.width=Math.max(2,Math.min(100,a.nota))+'%';i.style.background=cor(a.nota);b.appendChild(i);A.appendChild(b)});
+  var L=g('rx-acoes');L.textContent='';(u.acoes||[]).forEach(function(a){var li=el('li',a.texto);li.appendChild(el('small',a.area));L.appendChild(li)});
+  g('rx-evo').hidden=rx.length<2;var H=g('rx-hist');H.textContent='';rx.slice(-8).forEach(function(x){var c=el('div');c.style.height=Math.max(6,x.geral)+'%';c.style.background=cor(x.geral);c.appendChild(el('span',String(x.geral)));c.appendChild(el('small',dt(x.data)));H.appendChild(c)})}
+ var s=d.selo||{};g('se-none').hidden=!!s.inscrito;g('se-yes').hidden=!s.inscrito;
+ if(s.inscrito){g('se-msg').textContent=s.mensagem||'Acompanhe aqui cada etapa da avaliação.';var S=g('se-steps');S.textContent='';
+  s.etapas.forEach(function(e,i){var li=el('li'),st0=(e.status||'').toLowerCase(),k=/conclu|certific/.test(st0)?'ok':/andamento|avalia/.test(st0)?'run':'';
+   li.appendChild(el('span',k==='ok'?'✓':String(i+1),'pn-dot '+k));li.appendChild(el('b',e.nome));li.appendChild(el('small',e.status||'pendente'));S.appendChild(li)});
+  g('se-nota').textContent=s.nota_final!=null?'Nota final: '+s.nota_final+' de 100':''}
+ var C=g('up-cat');if(!C.options.length)(d.categorias||[]).forEach(function(c){C.appendChild(el('option',c))});
+ lista(d.arquivos||[])}
+function lista(fs){var U=g('up-list');U.textContent='';if(!fs.length){U.appendChild(el('li','Nenhum arquivo enviado ainda.','pn-empty'));return}
+ fs.forEach(function(f){var li=el('li');var a=el('span',f.nome);a.appendChild(el('small',' · '+f.categoria));li.appendChild(a);li.appendChild(el('small',dt(f.data)+' · '+Math.ceil(f.tamanho/1024)+' KB'));U.appendChild(li)})}
+function carregar(){call({acao:'dados',token:tok}).then(function(r){if(!r.ok){st(K,null);tok=null;g('pn-app').hidden=true;g('pn-login').hidden=false;g('pn-f2').hidden=true;g('pn-f1').hidden=false;if(r.erro==='sessao')msg(g('pn-m1'),'Sua sessão terminou. Entre de novo.');return}render(r)})
+ .catch(function(){msg(g('pn-m1'),'Sem conexão. Tente de novo.',1)})}
+g('pn-up').addEventListener('submit',function(ev){ev.preventDefault();var f=g('up-file').files[0],m=g('up-m'),b=ev.target.querySelector('button');
+ if(!f){msg(m,'Escolha um arquivo.',1);return}
+ if(f.size>5*1024*1024){msg(m,'O arquivo passa de 5 MB.',1);return}
+ if(!/\.(pdf|jpe?g|png)$/i.test(f.name)){msg(m,'Envie PDF, JPG ou PNG.',1);return}
+ if(!g('up-ok').checked){msg(m,'Confirme que os dados de alunos e famílias foram tarjados.',1);return}
+ b.disabled=true;msg(m,'Enviando...');var rd=new FileReader();
+ rd.onload=function(){var b64=String(rd.result).split(',')[1]||'';
+  call({acao:'upload',token:tok,categoria:g('up-cat').value,nome:f.name,consentimento:true,dados:b64}).then(function(r){b.disabled=false;
+   if(!r.ok){var E={tipo:'Esse arquivo não é um PDF, JPG ou PNG válido.',tamanho:'O arquivo passa de 5 MB.',limite:'Limite de envios do dia atingido.',sessao:'Sua sessão terminou. Entre de novo.',consentimento:'Confirme a caixa de dados tarjados.'};msg(m,E[r.erro]||'Não foi possível enviar agora.',1);return}
+   msg(m,'Arquivo enviado. Obrigada!');ev.target.reset();lista(r.arquivos||[])}).catch(function(){b.disabled=false;msg(m,'Sem conexão. Tente de novo.',1)})};
+ rd.readAsDataURL(f)});
+tok=ld(K);if(tok)carregar();
+})();
+</script></main><footer><div class="wrap">
+<div class="cols">
+<div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/logo.webp" alt="" width="34" height="45"><span>Coruja Criativa Tech<small>Gestão estratégica de negócios com olhar pedagógico</small></span></a>
+<p style="max-width:380px">Comercial, experiência do cliente, retenção e IA para escolas, cursos livres e escolas de idiomas.</p></div>
+<div><h4>Navegue</h4><a href="/raio-x/">Raio-X Digital</a><a href="/selo/">Selo Escola que Resolve</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="https://chaisales.github.io/ebook/">Ebook Da mensagem à matrícula</a><a href="/links/">Links</a><a href="/painel/">Painel da escola</a></div>
+<div><h4>Contato</h4><a href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp: (81) 99945-5944</a><a href="mailto:chaianesv@corujacriativatech.com.br">chaianesv@corujacriativatech.com.br</a><a href="https://www.instagram.com/chaisalesvicente/" target="_blank" rel="noopener">Instagram @chaisalesvicente</a><a href="https://www.linkedin.com/in/chaianesales/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.google.com/maps/place/Coruja+Criativa+Tech/@-8.0112617,-34.978105,17z" target="_blank" rel="noopener">Google Maps</a></div>
+</div>
+<div class="legal"><span>© 2026 Coruja Criativa Tech · Chaiane Sales da Silva Vicente · CNPJ 44.715.739/0001-55 · Pernambuco, Brasil</span><span><a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="#" onclick="window.corujaCookies&&corujaCookies();return false">Cookies</a> · Atendimento online para todo o Brasil</span></div>
+</div></footer>
+<a class="wa-float" href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 2 6.7L3 29l7-2.2c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.9c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.4 9.8 10.1 5.2 16 5.2s10.6 4.6 10.6 10.3S21.9 25.9 16 25.9zm5.8-7.7c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.1 1.4 3.3c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
+</body></html>
