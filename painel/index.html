@@ -15,16 +15,20 @@
 <meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/motion.css"><link rel="stylesheet" href="/assets/a11y.css">
+<script>try{var a=JSON.parse(localStorage.getItem("coruja-ax")||"{}"),r=document.documentElement;for(var k in a)if(a[k]&&k!=="zoom")r.classList.add("ax-"+k);if(a.zoom)r.style.zoom=[1,1.15,1.3,1.5][a.zoom]}catch(e){}</script>
 <link rel="alternate" type="application/rss+xml" title="Blog Coruja Criativa Tech" href="/blog/feed.xml">
 
 <script src="/assets/tracking.js" defer></script>
+<script src="/assets/a11y.js" defer></script>
+<script src="/assets/motion.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Coruja Criativa Tech", "description": "Consultoria de gestão estratégica de negócios com olhar pedagógico: comercial, experiência do cliente, retenção, CRM e IA para escolas, cursos livres e escolas de idiomas.", "url": "https://corujacriativatech.com.br/", "logo": "https://corujacriativatech.com.br/assets/logo.png", "image": "https://corujacriativatech.com.br/assets/og.jpg", "telephone": "+55-81-99945-5944", "founder": {"@type": "Person", "name": "Chaiane Sales Vicente", "sameAs": ["https://www.linkedin.com/in/chaianesales/", "https://www.instagram.com/chaisalesvicente/"]}, "employee": [{"@type": "Person", "name": "Gilcleide Vicente Sales", "jobTitle": "Professora e psicopedagoga, responsável pedagógica", "knowsAbout": ["psicopedagogia", "educação inclusiva", "educação especial", "coordenação pedagógica", "formação de professores"], "sameAs": ["https://www.linkedin.com/in/gilcleide-vicente-s-401436223/", "https://www.instagram.com/gilcleidevs/"]}], "areaServed": {"@type": "Country", "name": "Brasil"}, "address": {"@type": "PostalAddress", "addressLocality": "Camaragibe", "addressRegion": "PE", "addressCountry": "BR"}, "knowsAbout": ["captação de alunos", "rematrícula", "experiência do cliente", "customer success", "CRM educacional", "inteligência artificial no atendimento", "gestão escolar"], "sameAs": ["https://www.instagram.com/chaisalesvicente/", "https://www.linkedin.com/in/chaianesales/", "https://www.google.com/maps/place/Coruja+Criativa+Tech/@-8.0112617,-34.978105,17z"], "slogan": "Gestão estratégica de negócios com olhar pedagógico"}</script>
-</head><body><header class="top"><div class="wrap">
+</head><body>
+<div class="skip" role="navigation" aria-label="Atalhos de acessibilidade"><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a><a href="#menu" accesskey="2">Ir para o menu [2]</a><a href="#rodape" accesskey="3">Ir para o rodapé [3]</a><a href="/acessibilidade/#acessibilidade" data-ax-abrir accesskey="4">Recursos de acessibilidade [4]</a></div><header class="top"><div class="wrap">
 <a class="brand" href="/"><img src="/assets/logo.webp" alt="" width="34" height="45"><span>Coruja Criativa Tech<small>por Chaiane Sales Vicente</small></span></a>
-<button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="const m=document.querySelector('nav.menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">☰</button>
-<nav class="menu" aria-label="Principal"><a href="/">Início</a><a href="/raio-x/">Raio-X</a><a href="/selo/">Selo</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="https://chaisales.github.io/ebook/" target="_blank" rel="noopener">Ebook</a><a class="btn" href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende uma conversa</a></nav>
-</div></header><main><style>
+<button class="menu-toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" onclick="const m=document.querySelector('nav.menu');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">☰</button>
+<nav class="menu" id="menu" aria-label="Principal"><a href="/">Início</a><a href="/raio-x/">Raio-X</a><a href="/selo/">Selo</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="https://chaisales.github.io/ebook/" target="_blank" rel="noopener">Ebook</a><a class="btn" href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende uma conversa</a></nav>
+</div></header><main id="conteudo" tabindex="-1"><style>
 .pn{max-width:980px;margin:0 auto}
 .pn-card{background:var(--white);border:1px solid var(--soft);border-radius:var(--radius);padding:28px}
 .pn-login{max-width:460px;margin:0 auto}
@@ -96,13 +100,13 @@
     <button class="btn pn-out" id="pn-sair" type="button">Sair</button>
   </div>
   <div class="pn-tabs" role="tablist">
-    <button role="tab" data-t="raiox" aria-selected="true">Raio-X</button>
-    <button role="tab" data-t="selo" aria-selected="false">Selo</button>
-    <button role="tab" data-t="arq" aria-selected="false">Arquivos</button>
-    <button role="tab" data-t="mat" aria-selected="false">Materiais</button>
+    <button role="tab" id="tab-raiox" data-t="raiox" aria-controls="pnl-raiox" aria-selected="true">Raio-X</button>
+    <button role="tab" id="tab-selo" data-t="selo" aria-controls="pnl-selo" aria-selected="false" tabindex="-1">Selo</button>
+    <button role="tab" id="tab-arq" data-t="arq" aria-controls="pnl-arq" aria-selected="false" tabindex="-1">Arquivos</button>
+    <button role="tab" id="tab-mat" data-t="mat" aria-controls="pnl-mat" aria-selected="false" tabindex="-1">Materiais</button>
   </div>
 
-  <div class="pn-card" data-p="raiox">
+  <div class="pn-card" id="pnl-raiox" role="tabpanel" aria-labelledby="tab-raiox" tabindex="0" data-p="raiox">
     <div id="rx-none" hidden><h2>Sua escola ainda não tem Raio-X</h2><p class="pn-empty" style="margin-top:8px">Em 15 minutos você descobre onde a escola perde famílias e recebe 5 ações para a semana.</p><a class="btn" href="/raio-x/" style="margin-top:16px">Conhecer o Raio-X</a></div>
     <div id="rx-yes" hidden>
       <div class="pn-score"><div><div class="pn-big" id="rx-geral"></div><span class="pn-pill" id="rx-nivel"></span></div><p style="color:var(--muted);max-width:420px" id="rx-data"></p></div>
@@ -113,12 +117,12 @@
     </div>
   </div>
 
-  <div class="pn-card" data-p="selo" hidden>
+  <div class="pn-card" id="pnl-selo" role="tabpanel" aria-labelledby="tab-selo" tabindex="0" data-p="selo" hidden>
     <div id="se-none" hidden><h2>Selo Escola que Resolve</h2><p class="pn-empty" style="margin-top:8px">Sua escola ainda não está na turma piloto. O selo não se compra: se conquista, por cliente oculto, pesquisa com famílias e revisão pedagógica.</p><a class="btn" href="/selo/" style="margin-top:16px">Ver critérios</a></div>
     <div id="se-yes" hidden><h2>Sua avaliação do Selo</h2><p class="pn-empty" id="se-msg" style="margin-top:8px"></p><ul class="pn-steps" id="se-steps" style="margin-top:12px"></ul><p id="se-nota" style="margin-top:16px;font-weight:700"></p></div>
   </div>
 
-  <div class="pn-card" data-p="arq" hidden>
+  <div class="pn-card" id="pnl-arq" role="tabpanel" aria-labelledby="tab-arq" tabindex="0" data-p="arq" hidden>
     <h2>Arquivos da escola</h2>
     <p class="pn-empty" style="margin-top:8px">Envie evidências para o Selo ou materiais que a Coruja pediu. PDF, JPG ou PNG, até 5 MB. Os arquivos ficam em pasta privada; só a Coruja acessa.</p>
     <form class="pn-up" id="pn-up">
@@ -131,7 +135,7 @@
     <ul class="pn-files" id="up-list"></ul>
   </div>
 
-  <div class="pn-card" data-p="mat" hidden>
+  <div class="pn-card" id="pnl-mat" role="tabpanel" aria-labelledby="tab-mat" tabindex="0" data-p="mat" hidden>
     <h2>Materiais</h2>
     <ul style="margin-top:12px;padding-left:20px">
       <li><a href="/loja/">Loja Coruja</a>: kits de prompts e materiais prontos para a equipe.</li>
@@ -163,9 +167,10 @@ g('pn-back').addEventListener('click',function(){g('pn-f2').hidden=true;g('pn-f1
 g('pn-f2').addEventListener('submit',function(ev){ev.preventDefault();var b=ev.target.querySelector('button');b.disabled=true;
  call({acao:'entrar',email:email,codigo:g('pn-code').value}).then(function(r){b.disabled=false;if(!r.ok){msg(g('pn-m1'),ERR[r.erro]||ERR.codigo,1);return}tok=r.token;st(K,tok);carregar()})
  .catch(function(){b.disabled=false;msg(g('pn-m1'),'Sem conexão. Tente de novo.',1)})});
+document.querySelector('.pn-tabs').addEventListener('keydown',function(ev){var bs=[].slice.call(document.querySelectorAll('.pn-tabs button')),i=bs.indexOf(document.activeElement);if(i<0)return;var n=ev.key==='ArrowRight'?i+1:ev.key==='ArrowLeft'?i-1:ev.key==='Home'?0:ev.key==='End'?bs.length-1:null;if(n===null)return;ev.preventDefault();n=(n+bs.length)%bs.length;bs[n].focus();bs[n].click()});
 g('pn-sair').addEventListener('click',function(){tok=null;st(K,null);location.reload()});
 document.querySelectorAll('.pn-tabs button').forEach(function(bt){bt.addEventListener('click',function(){
- document.querySelectorAll('.pn-tabs button').forEach(function(x){x.setAttribute('aria-selected',x===bt?'true':'false')});
+ document.querySelectorAll('.pn-tabs button').forEach(function(x){x.setAttribute('aria-selected',x===bt?'true':'false');x.tabIndex=x===bt?0:-1});
  document.querySelectorAll('[data-p]').forEach(function(p){p.hidden=p.getAttribute('data-p')!==bt.getAttribute('data-t')})})});
 function render(d){
  g('pn-login').hidden=true;g('pn-app').hidden=false;g('pn-hello').textContent='Olá, '+(d.escola||d.email);
@@ -199,14 +204,17 @@ g('pn-up').addEventListener('submit',function(ev){ev.preventDefault();var f=g('u
  rd.readAsDataURL(f)});
 tok=ld(K);if(tok)carregar();
 })();
-</script></main><footer><div class="wrap">
+</script></main><footer id="rodape"><div class="wrap">
 <div class="cols">
 <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/logo.webp" alt="" width="34" height="45"><span>Coruja Criativa Tech<small>Gestão estratégica de negócios com olhar pedagógico</small></span></a>
 <p style="max-width:380px">Comercial, experiência do cliente, retenção e IA para escolas, cursos livres e escolas de idiomas.</p></div>
-<div><h4>Navegue</h4><a href="/raio-x/">Raio-X Digital</a><a href="/selo/">Selo Escola que Resolve</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="https://chaisales.github.io/ebook/">Ebook Da mensagem à matrícula</a><a href="/links/">Links</a><a href="/painel/">Painel da escola</a></div>
-<div><h4>Contato</h4><a href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp: (81) 99945-5944</a><a href="mailto:chaianesv@corujacriativatech.com.br">chaianesv@corujacriativatech.com.br</a><a href="https://www.instagram.com/chaisalesvicente/" target="_blank" rel="noopener">Instagram @chaisalesvicente</a><a href="https://www.linkedin.com/in/chaianesales/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.google.com/maps/place/Coruja+Criativa+Tech/@-8.0112617,-34.978105,17z" target="_blank" rel="noopener">Google Maps</a></div>
+<div><h2 class="fh">Navegue</h2><a href="/raio-x/">Raio-X Digital</a><a href="/selo/">Selo Escola que Resolve</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="https://chaisales.github.io/ebook/">Ebook Da mensagem à matrícula</a><a href="/links/">Links</a><a href="/painel/">Painel da escola</a><a href="/acessibilidade/">Acessibilidade</a></div>
+<div><h2 class="fh">Contato</h2><a href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp: (81) 99945-5944</a><a href="mailto:chaianesv@corujacriativatech.com.br">chaianesv@corujacriativatech.com.br</a><a href="https://www.instagram.com/chaisalesvicente/" target="_blank" rel="noopener">Instagram @chaisalesvicente</a><a href="https://www.linkedin.com/in/chaianesales/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.google.com/maps/place/Coruja+Criativa+Tech/@-8.0112617,-34.978105,17z" target="_blank" rel="noopener">Google Maps</a></div>
 </div>
-<div class="legal"><span>© 2026 Coruja Criativa Tech · Chaiane Sales da Silva Vicente · CNPJ 44.715.739/0001-55 · Pernambuco, Brasil</span><span><a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="#" onclick="window.corujaCookies&&corujaCookies();return false">Cookies</a> · Atendimento online para todo o Brasil</span></div>
+<div class="legal"><span>© 2026 Coruja Criativa Tech · Chaiane Sales da Silva Vicente · CNPJ 44.715.739/0001-55 · Pernambuco, Brasil</span><span><a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="/acessibilidade/">Acessibilidade</a> · <a href="#" onclick="window.corujaCookies&&corujaCookies();return false">Cookies</a> · Atendimento online para todo o Brasil</span></div>
 </div></footer>
-<a class="wa-float" href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 2 6.7L3 29l7-2.2c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.9c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.4 9.8 10.1 5.2 16 5.2s10.6 4.6 10.6 10.3S21.9 25.9 16 25.9zm5.8-7.7c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.1 1.4 3.3c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
+<aside aria-label="Contato rápido"><a class="wa-float" href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp (abre em nova aba)"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 2 6.7L3 29l7-2.2c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.9c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.4 9.8 10.1 5.2 16 5.2s10.6 4.6 10.6 10.3S21.9 25.9 16 25.9zm5.8-7.7c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.1 1.4 3.3c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a></aside>
+<div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+<script>window.addEventListener("load",function(){try{new window.VLibras.Widget("https://vlibras.gov.br/app")}catch(e){}});</script>
 </body></html>

@@ -1,0 +1,84 @@
+/* Coruja Criativa Tech · camada de movimento (v1, 31/10/2026)
+   Leve, sem bibliotecas. Tudo é desligado para quem pede menos movimento no sistema. */
+
+/* partículas do hero */
+.hero .fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9}
+.hero .wrap{position:relative;z-index:1}
+.hero:after{content:"";position:absolute;left:-200px;bottom:-260px;width:560px;height:560px;border-radius:50%;
+  background:radial-gradient(circle,rgba(31,143,156,.22),rgba(7,28,36,0) 65%);animation:mv-drift 14s ease-in-out infinite alternate}
+.hero:before{animation:mv-drift 18s ease-in-out infinite alternate-reverse}
+@keyframes mv-drift{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,-30px) scale(1.08)}}
+
+/* coruja flutuando, com brilho e parallax (o JS ajusta --px/--py) */
+.hero .owl{animation:mv-float 6s ease-in-out infinite;transform:translate(var(--px,0),var(--py,0));transition:transform .4s ease-out}
+@keyframes mv-float{0%,100%{translate:0 0}50%{translate:0 -14px}}
+.hero .owl{filter:drop-shadow(0 30px 60px rgba(0,0,0,.45)) drop-shadow(0 0 0 rgba(56,217,240,0));animation:mv-float 6s ease-in-out infinite,mv-glow 4s ease-in-out infinite}
+@keyframes mv-glow{0%,100%{filter:drop-shadow(0 30px 60px rgba(0,0,0,.45)) drop-shadow(0 0 0 rgba(56,217,240,0))}50%{filter:drop-shadow(0 30px 60px rgba(0,0,0,.45)) drop-shadow(0 0 18px rgba(56,217,240,.45))}}
+
+/* selo flutuando no topo da página do Selo */
+.hero img[src*="selo"]{animation:mv-float 6s ease-in-out infinite}
+
+/* entrada do hero */
+.hero h1,.hero .lead,.hero .actions,.hero .kicker,.hero .sign{animation:mv-up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .kicker{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero .lead{animation-delay:.3s}.hero .actions{animation-delay:.45s}.hero .sign{animation-delay:.6s}
+@keyframes mv-up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero h1 .c{background:linear-gradient(90deg,var(--cyan),#9BF1FF,var(--cyan));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:mv-shine 6s linear infinite}
+@keyframes mv-shine{to{background-position:-200% 0}}
+
+/* botões: brilho que atravessa e pulso suave no principal do hero */
+.btn{position:relative;overflow:hidden}
+.btn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.btn:hover:after{left:130%}
+.hero .actions .btn:not(.ghost){animation:mv-up .9s cubic-bezier(.2,.7,.2,1) .45s both,mv-pulse 2.8s ease-in-out 1.6s infinite}
+@keyframes mv-pulse{0%,100%{box-shadow:0 0 0 0 rgba(56,217,240,.45)}50%{box-shadow:0 0 0 10px rgba(56,217,240,0)}}
+
+/* cartões que levantam */
+.card,.stat,.step,.post-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover,.stat:hover,.step:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(7,28,36,.12);border-color:var(--teal)}
+.dark .card:hover{box-shadow:0 18px 40px rgba(0,0,0,.35);border-color:var(--cyan)}
+
+/* revelar ao rolar (só quando o JS está ativo) */
+.js-motion .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js-motion .rv.in{opacity:1;transform:none}
+.js-motion .rv-zoom{opacity:0;transform:scale(.6) rotate(-25deg);transition:opacity .8s ease,transform 1s cubic-bezier(.2,1.4,.4,1)}
+.js-motion .rv-zoom.in{opacity:1;transform:none}
+
+/* passos com linha que se desenha */
+.steps{position:relative}
+.js-motion .steps:before{content:"";position:absolute;left:0;right:0;top:-14px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--teal),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.js-motion .steps.in:before{transform:scaleX(1)}
+
+/* conversa animada: atender x resolver */
+.chatdemo{margin-top:30px;background:#0B2A33;border:1px solid #1E5A68;border-radius:22px;padding:16px;max-width:460px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.cd-head{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mist);padding:2px 4px 12px;border-bottom:1px solid #16414C}
+.cd-head i{width:9px;height:9px;border-radius:50%;background:#25D366;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:mv-online 2s infinite}
+@keyframes mv-online{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 8px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.cd-body{display:flex;flex-direction:column;gap:10px;padding-top:14px;min-height:340px}
+.cd-msg{max-width:86%;padding:10px 14px;border-radius:16px;font-size:15px;line-height:1.4;color:var(--cream)}
+.cd-msg small{display:block;font-size:11px;color:var(--mist);margin-top:4px}
+.cd-msg.fam{align-self:flex-start;background:#16414C;border-bottom-left-radius:4px}
+.cd-msg.esc{align-self:flex-end;background:#0F5E68;border-bottom-right-radius:4px}
+.cd-msg.bad{opacity:.75}
+.cd-tag{align-self:flex-end;font-weight:900;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.cd-tag.bad{background:rgba(231,76,60,.15);color:#FF8A7A}
+.cd-tag.good{background:rgba(56,217,240,.18);color:var(--cyan)}
+.cd-typing{align-self:flex-end;display:flex;gap:4px;padding:12px 14px;background:#0F5E68;border-radius:16px}
+.cd-typing i{width:7px;height:7px;border-radius:50%;background:var(--mist);animation:mv-dot 1s infinite}
+.cd-typing i:nth-child(2){animation-delay:.15s}.cd-typing i:nth-child(3){animation-delay:.3s}
+@keyframes mv-dot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-5px);opacity:1}}
+.js-motion .cd-step{opacity:0;transform:translateY(10px) scale(.98);transition:opacity .45s ease,transform .45s ease;display:none}
+.js-motion .cd-step.on{display:flex;opacity:1;transform:none}
+.js-motion .cd-msg.cd-step.on{display:block}
+
+/* números que contam */
+.stat b{font-variant-numeric:tabular-nums}
+
+/* menos movimento: tudo parado e visível */
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  .hero .fx{display:none}
+  .js-motion .rv,.js-motion .rv-zoom{opacity:1;transform:none}
+  .js-motion .cd-step{display:flex;opacity:1;transform:none}
+  .js-motion .cd-msg.cd-step{display:block}
+  .js-motion .cd-typing{display:none!important}
+}
