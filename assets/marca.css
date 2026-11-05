@@ -1,0 +1,97 @@
+/* Coruja Criativa Tech · identidade B (Editorial humano) · v1, 05/11/2026
+   Carregado depois de style.css, motion.css e a11y.css.
+   Para voltar à identidade anterior: remova o link deste arquivo no build.py e restaure backup_identidade_A. */
+
+@font-face{font-family:Fraunces;src:url(/assets/fonts/fraunces.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/fonts/inter.woff2) format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+
+:root{
+  --ink:#12343B; --ink2:#0E2B31; --ink3:#1F4952;
+  --cream:#F4F1EA; --white:#FBF9F4; --sand:#E7DCCB; --line:#D9CFBF;
+  --cyan:#E8835F;   /* destaque sobre petróleo (terracota clara) */
+  --teal:#B24A27;   /* destaque sobre claro (terracota) */
+  --muted:#4D6468; --soft:#E2D9C9; --mist:#A9C2C5;
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --text:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sub:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M4 8 C 30 3, 80 6, 116 4' fill='none' stroke='%23B24A27' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+  --sub-claro:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M4 8 C 30 3, 80 6, 116 4' fill='none' stroke='%23E8835F' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* tipografia */
+h1,h2,h3,.quote{letter-spacing:-.012em}
+h1,h2,h3{font-weight:600}
+.quote{font-weight:600}
+.stat b,.card .n,.step:before{font-weight:600}
+.kicker{font-weight:600;letter-spacing:.16em}
+article.post blockquote{font-weight:600;border-left-color:var(--teal)}
+.brand{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.005em}
+
+/* cabeçalho claro */
+.top{background:rgba(244,241,234,.95);border-bottom:1px solid var(--line)}
+.top .brand{color:var(--ink)}
+.brand span small{color:var(--muted)}
+.brand img{width:38px;height:38px}
+nav.menu a{color:var(--ink)}
+nav.menu a:hover,nav.menu a[aria-current]{color:var(--teal)}
+nav.menu a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px}
+nav.menu a.btn{color:var(--cream)!important;text-decoration:none}
+.menu-toggle{color:var(--ink)}
+@media (max-width:860px){nav.menu{background:var(--cream);border-bottom:1px solid var(--line)}}
+header :focus-visible{outline-color:#12343B;box-shadow:0 0 0 6px #FFE14D}
+
+/* botões */
+.btn{background:var(--teal);color:var(--cream)!important;font-weight:600;border-radius:999px}
+.btn:hover{box-shadow:0 10px 24px rgba(178,74,39,.22)}
+.btn.ghost{background:transparent;color:var(--ink)!important;border:1.5px solid var(--ink)}
+.btn.ghost:hover{border-color:var(--teal);color:var(--teal)!important}
+.dark .btn.ghost{color:var(--cream)!important;border-color:#4A747C}
+.dark .btn.ghost:hover{border-color:var(--cyan);color:var(--cream)!important}
+.btn.dark{background:var(--ink);color:var(--cream)!important}
+
+/* topo das páginas em papel (as outras faixas escuras continuam em petróleo) */
+.hero.dark{background:var(--cream);color:var(--ink)}
+.hero:before,.hero:after{display:none}
+.hero.dark .kicker{color:var(--teal)}
+.hero.dark .lead,.hero .sign{color:var(--muted)}
+.hero.dark .btn.ghost{color:var(--ink)!important;border-color:var(--ink)}
+.hero.dark .btn.ghost:hover{border-color:var(--teal);color:var(--teal)!important}
+.hero.dark .card{background:var(--white);border-color:var(--soft)}
+.hero.dark .card p{color:var(--muted)} .hero.dark .card li{color:var(--ink)} .hero.dark .card .n{color:var(--teal)}
+.hero.dark .card.feat{background:var(--ink);color:var(--cream)}
+.hero.dark .card.feat p{color:var(--mist)} .hero.dark .card.feat li{color:var(--cream)} .hero.dark .card.feat .n{color:var(--cyan)}
+.hero.dark a:not(.btn){color:var(--teal)}
+.hero .owl{filter:none;max-width:300px;animation:mv-float 6s ease-in-out infinite}
+@media (max-width:860px){.hero .owl{max-width:84px}}
+.hero.dark .sign b{color:var(--ink)!important}
+.hero.dark :focus-visible{outline-color:#12343B;box-shadow:0 0 0 6px #FFE14D}
+
+/* destaque com sublinhado à mão: no topo, a palavra fica em petróleo e ganha o traço terracota */
+.c{color:var(--teal)}
+.dark .c{color:var(--cyan)}
+.hero.dark .c{color:var(--teal)}
+.quote em{color:var(--teal)}
+.dark .quote em{color:var(--cyan)}
+.gen .card h3 span{color:var(--teal)}
+.dark .gen .card h3 span{color:var(--cyan)}
+
+.hero h1 .c,.hero.dark h1 .c{color:inherit;background:var(--sub) no-repeat 0 100%/100% .16em;-webkit-background-clip:border-box;background-clip:border-box;animation:none;padding-bottom:.08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* faixas escuras */
+.dark .card{border-color:var(--ink3)}
+footer,footer .legal{border-color:var(--ink3)}
+footer .brand{color:var(--cream)}
+footer .brand span small{color:var(--mist)}
+
+/* movimento: pulso e conversa no tom da nova paleta */
+@keyframes mv-pulse{0%,100%{box-shadow:0 0 0 0 rgba(178,74,39,.35)}50%{box-shadow:0 0 0 10px rgba(178,74,39,0)}}
+.chatdemo{background:var(--ink);border-color:var(--ink3)}
+.cd-head{border-bottom-color:var(--ink3)}
+.cd-msg.fam{background:var(--ink3)}
+.cd-msg.esc,.cd-typing{background:#24505A}
+.cd-msg small{color:#BFD3D5}
+.cd-msg.bad{opacity:1}
+.cd-tag.good{background:rgba(232,131,95,.16);color:#F2A486}
+
+/* página de links */
+.links-box a.l{border-color:var(--ink3)}
+.links-box a.l.main{background:var(--cyan);border-color:var(--cyan);color:var(--ink)}

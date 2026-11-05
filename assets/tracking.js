@@ -1,4 +1,4 @@
-/* Coruja Criativa Tech · medição do site
+/* Coruja Criativa Tech · medição do site (v2, 04/11/2026: contagem anônima própria para o painel /comercial/)
    - Repassa a origem da visita (UTM) para o checkout da Kiwify, mesmo sem nenhuma ferramenta ligada.
    - GA4, Meta Pixel e Microsoft Clarity só ligam quando o ID estiver preenchido abaixo.
    - LGPD: GA4 roda em modo de consentimento (sem cookies até a pessoa aceitar); Pixel e Clarity só depois do aceite. */
@@ -75,6 +75,30 @@
     pageEvents(true);
   }
 
+  /* ---------- 2b. Contagem anônima própria (painel /comercial/) ----------
+     Sem cookies e sem identificador: manda só o tipo do evento, a página, a origem e o produto.
+     Duas marcas ficam no sessionStorage da aba (some ao fechar): início da visita e primeira vez. */
+  var API = 'https://script.google.com/macros/s/AKfycbyduVRH4daYFbMGZuN2mKr4QH2huPtu8GgF9hZtKVbg_xD7nIkmy-o-H3uUFGtbL4tJ/exec';
+  var interno = get('coruja-interno') === '1';
+  var robo = !!(w.navigator.webdriver || /bot|crawl|spider|lighthouse|headless|preview|facebookexternalhit/i.test(w.navigator.userAgent || ''));
+  function ses(k, v) { try { if (v === undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k, v); } catch (e) { return null; } return null; }
+  function primeira(chave) { if (ses('cj-' + chave)) return false; ses('cj-' + chave, '1'); return true; }
+  function conta(e, extra) {
+    if (interno || robo || !w.navigator.sendBeacon) return;
+    var o = { acao: 'evento', e: e, p: path.slice(0, 80), o: (utm && utm.utm_source) || 'direto' };
+    for (var k in extra) if (extra.hasOwnProperty(k)) o[k] = extra[k];
+    try { w.navigator.sendBeacon(API, new Blob([JSON.stringify(o)], { type: 'text/plain;charset=utf-8' })); } catch (er) {}
+  }
+  function itemDaPagina() {
+    if (/^\/raio-x\/?(index\.html)?$/.test(path)) return 'raiox';
+    if (/^\/selo\//.test(path)) return 'selo';
+    if (/^\/trilha\//.test(path)) return 'trilha';
+    if (/^\/loja\//.test(path)) return 'loja';
+    return '';
+  }
+  function itemDoLink(h) { return h.indexOf('LRc2RIx') >= 0 ? 'raiox' : h.indexOf('rbKe2An') >= 0 ? 'kit' : h.indexOf('TBvIycC') >= 0 ? 'ebook' : ''; }
+  (function () { var it = itemDaPagina(); conta('pagina', { n: primeira('visita') ? 1 : 0, i: it, f: it ? (primeira('viu') ? 1 : 0) : 0 }); })();
+
   /* ---------- 3. Eventos do funil ---------- */
   function track(ga, gaParams, meta, metaParams) {
     if (C.ga4 && ga) gtag('event', ga, gaParams || {});
@@ -97,8 +121,8 @@
     if (!a) return;
     if (a.getAttribute('data-track')) track(a.getAttribute('data-track'), { link_url: a.href || '' });
     var h = a.href || '';
-    if (h.indexOf('pay.kiwify.com.br') >= 0) { decorate(a); track('begin_checkout', RAIOX, M('InitiateCheckout'), { content_name: 'Raio-X Digital', value: 97, currency: 'BRL' }); }
-    else if (h.indexOf('wa.me/') >= 0) track('contato_whatsapp', { page: path }, M('Contact'), { content_name: 'WhatsApp' });
+    if (h.indexOf('pay.kiwify.com.br') >= 0) { decorate(a); track('begin_checkout', RAIOX, M('InitiateCheckout'), { content_name: 'Raio-X Digital', value: 97, currency: 'BRL' }); conta('checkout', { i: itemDoLink(h), f: primeira('clicou') ? 1 : 0 }); }
+    else if (h.indexOf('wa.me/') >= 0) { track('contato_whatsapp', { page: path }, M('Contact'), { content_name: 'WhatsApp' }); conta('whatsapp', { f: primeira('whats') ? 1 : 0 }); }
     else if (h.indexOf('mailto:') === 0) track('contato_email', { page: path }, M('Contact'), { content_name: 'E-mail' });
     else if (/\/ebook\/?/.test(h)) track('clique_ebook', { page: path }, MC('CliqueEbook'));
   }, true);
@@ -116,10 +140,10 @@
   function banner() {
     if (d.getElementById('cc-banner')) return;
     var b = d.createElement('div'); b.id = 'cc-banner'; b.setAttribute('role', 'dialog'); b.setAttribute('aria-label', 'Preferências de cookies');
-    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#071C24;color:#E6F2F4;border:1px solid #19B5C9;border-radius:14px;padding:16px 18px;font:14px/1.5 Inter,Arial,sans-serif;box-shadow:0 12px 32px rgba(0,0,0,.35)';
-    b.innerHTML = '<p style="margin:0 0 12px">Usamos cookies para entender como o site é usado e medir nossos anúncios. Você escolhe. <a href="/privacidade/" style="color:#19B5C9">Política de privacidade</a></p>' +
-      '<div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="all" style="background:#19B5C9;color:#071C24;border:0;border-radius:8px;padding:10px 16px;font-weight:700;cursor:pointer">Aceitar</button>' +
-      '<button type="button" data-v="essential" style="background:transparent;color:#E6F2F4;border:1px solid #5B7078;border-radius:8px;padding:10px 16px;cursor:pointer">Só os essenciais</button></div>';
+    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#12343B;color:#F4F1EA;border:1px solid #1F4952;border-radius:14px;padding:16px 18px;font:14px/1.5 Inter,Arial,sans-serif;box-shadow:0 12px 32px rgba(0,0,0,.35)';
+    b.innerHTML = '<p style="margin:0 0 12px">Usamos cookies para entender como o site é usado e medir nossos anúncios. Você escolhe. <a href="/privacidade/" style="color:#F2A486">Política de privacidade</a></p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="all" style="background:#E8835F;color:#12343B;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer">Aceitar</button>' +
+      '<button type="button" data-v="essential" style="background:transparent;color:#F4F1EA;border:1px solid #4A747C;border-radius:999px;padding:10px 16px;cursor:pointer">Só os essenciais</button></div>';
     b.addEventListener('click', function (e) { var v = e.target.getAttribute && e.target.getAttribute('data-v'); if (v) choose(v); });
     d.body.appendChild(b);
   }

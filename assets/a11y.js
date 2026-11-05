@@ -68,7 +68,7 @@
     var normal = el('button', { type: 'button', 'aria-label': 'Texto no tamanho normal' }, 'A');
     var mais = el('button', { type: 'button', 'aria-label': 'Aumentar texto' }, 'A+');
     linha.appendChild(menos); linha.appendChild(normal); linha.appendChild(mais);
-    p.appendChild(el('p', { 'class': 'ax-sub', style: 'margin:0 0 6px;font-weight:700;color:#071C24' }, 'Tamanho do texto'));
+    p.appendChild(el('p', { 'class': 'ax-sub', style: 'margin:0 0 6px;font-weight:700;color:#12343B' }, 'Tamanho do texto'));
     p.appendChild(linha);
     var status = el('p', { 'class': 'sr', role: 'status', 'aria-live': 'polite' });
     p.appendChild(status);

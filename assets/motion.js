@@ -82,14 +82,14 @@
         if (d < 9000) { p.x += dx * 0.02; p.y += dy * 0.02; }
         if (p.y < -6) { p.y = H + 6; p.x = Math.random() * W; }
         cx.globalAlpha = p.a * (0.6 + 0.4 * Math.sin(t / 900 + p.f));
-        cx.fillStyle = i % 4 ? '#38D9F0' : '#EAF4F5';
+        cx.fillStyle = i % 4 ? 'rgba(18,52,59,.30)' : 'rgba(178,74,39,.55)';
         cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, 6.283); cx.fill();
       }
       // linhas finas entre partículas próximas (rede "tech")
       cx.globalAlpha = 1; cx.lineWidth = 0.6;
       for (var a = 0; a < pts.length; a++) for (var b2 = a + 1; b2 < pts.length; b2++) {
         var ex = pts[a].x - pts[b2].x, ey = pts[a].y - pts[b2].y, dd = ex * ex + ey * ey;
-        if (dd < 9000) { cx.strokeStyle = 'rgba(56,217,240,' + (0.26 * (1 - dd / 9000)) + ')'; cx.beginPath(); cx.moveTo(pts[a].x, pts[a].y); cx.lineTo(pts[b2].x, pts[b2].y); cx.stroke(); }
+        if (dd < 9000) { cx.strokeStyle = 'rgba(18,52,59,' + (0.12 * (1 - dd / 9000)) + ')'; cx.beginPath(); cx.moveTo(pts[a].x, pts[a].y); cx.lineTo(pts[b2].x, pts[b2].y); cx.stroke(); }
       }
       requestAnimationFrame(quadro);
     }
