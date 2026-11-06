@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; object-src 'none'; base-uri 'self'; form-action 'self'">
+<title>Da mensagem à matrícula · Guia prático da Coruja Criativa Tech</title>
+<meta name="description" content="Guia prático para escolas, cursos livres e escolas de idiomas pararem de perder famílias entre a primeira mensagem e a matrícula. Por Chaiane Sales Vicente, Coruja Criativa Tech. R$ 27.">
+<link rel="canonical" href="https://chaisales.github.io/ebook/">
+<link rel="icon" href="favicon.png">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Da mensagem à matrícula · Guia prático para escolas e cursos">
+<meta property="og:description" content="Guia prático para escolas, cursos livres e escolas de idiomas pararem de perder famílias entre a primeira mensagem e a matrícula. Por Chaiane Sales Vicente, Coruja Criativa Tech. R$ 27.">
+<meta property="og:image" content="https://chaisales.github.io/ebook/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://chaisales.github.io/ebook/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+</head><body>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Layout: dark petróleo hero with the cover, then light reading sections, one cyan accent for actions */
+:root{
+  --ink:#12343B; --ink-2:#1F4952; --paper:#F4F1EA; --card:#FBF9F4; --line:#D9CFBF;
+  --text:#12343B; --muted:#4D6468; --cyan:#E8835F; --teal:#B24A27; --on-cyan:#12343B;
+  --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0E2B31;--card:#12343B;--line:#1F4952;--text:#F4F1EA;--muted:#A9C2C5;--teal:#E8835F;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0E2B31;--card:#12343B;--line:#1F4952;--text:#F4F1EA;--muted:#A9C2C5;--teal:#E8835F;color-scheme:dark}
+@font-face{font-family:Fraunces;src:url(/assets/fonts/fraunces.woff2) format('woff2');font-weight:400 700;font-display:swap}@font-face{font-family:Inter;src:url(/assets/fonts/inter.woff2) format('woff2');font-weight:400 800;font-display:swap}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.01em;font-weight:600!important;text-wrap:balance;margin:0}
+.hero{background:var(--ink);color:#F4F1EA}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:64px 72px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.02;font-weight:900;margin:18px 0 20px}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero p.sub{font-size:20px;color:#E7DCCB;max-width:30ch;margin:0 0 28px}
+.price{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+.price b{font-family:var(--display);font-size:44px;font-weight:900;color:#fff;white-space:nowrap;flex-shrink:0}
+.price span{color:#A9C2C5;font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--cyan);color:var(--on-cyan);font-weight:800;font-size:18px;padding:16px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.06)} .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn[aria-disabled="true"]{background:#1F4952;color:#E7DCCB;cursor:default}
+.note{font-size:14px;color:#A9C2C5;margin-top:12px}
+.cover{justify-self:center;width:min(340px,100%);border-radius:10px;box-shadow:0 30px 60px rgba(0,0,0,.45);transform:rotate(2deg)}
+section{padding-block:64px}
+section h2{font-size:clamp(28px,4vw,40px);line-height:1.15;font-weight:800;margin-bottom:12px}
+.lede{color:var(--muted);max-width:60ch;margin:0 0 32px}
+.pain{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pain div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.pain b{display:block;font-family:var(--display);font-size:19px;margin-bottom:4px}
+.pain p{margin:0;color:var(--muted);font-size:15.5px}
+.chapters{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.chapters li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.chapters .n{font-family:var(--display);font-weight:900;font-size:28px;color:var(--teal);line-height:1.1}
+.chapters b{font-size:18px;display:block}
+.chapters span{color:var(--muted);font-size:15.5px}
+.band{background:var(--ink);color:#F4F1EA}
+.band .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.band blockquote{margin:0;font-family:var(--display);font-size:clamp(24px,3.2vw,34px);line-height:1.2;font-weight:800}
+.band blockquote em{font-style:normal;color:var(--cyan)}
+.band p{color:#E7DCCB;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.facts span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14.5px;font-weight:600}
+.faq{display:grid;gap:12px;max-width:760px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin:10px 0 0;color:var(--muted)}
+.final{text-align:center}
+.final .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.final .price{justify-content:center}
+.final .price b{color:var(--text)} .final .price span{color:var(--muted)}
+footer{padding-block:28px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:40px 48px;gap:32px}
+  .cover{width:min(260px,80%);order:-1;transform:none}
+  .pain{grid-template-columns:1fr}
+  .band .wrap{grid-template-columns:1fr}
+  section{padding-block:44px}
+}
+@media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s}}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Guia prático · Coruja Criativa Tech</div>
+      <h1>Da mensagem à <em>matrícula</em></h1>
+      <p class="sub">O guia para escolas e cursos pararem de perder famílias no atendimento.</p>
+      <div class="price"><b>R$ 27</b><span>pagamento único · PDF com 29 páginas</span></div>
+      <a class="btn buy" href="#" aria-disabled="true">Vendas abrem hoje</a>
+      <p class="note">Acesso imediato após a compra. Para ler no celular ou imprimir.</p>
+    </div>
+    <img class="cover" alt="Capa do ebook Da mensagem à matrícula, com a coruja da Coruja Criativa Tech" src="capa.jpg">
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Sua escola perde famílias antes da primeira conversa?</h2>
+    <p class="lede">A maioria das matrículas não se perde por preço. Se perde no caminho, em pontos que quase ninguém mede.</p>
+    <div class="pain">
+      <div><b>A mensagem ficou sem resposta</b><p>A família escreveu às 19h, a escola respondeu no dia seguinte, e ela já tinha conversado com outra.</p></div>
+      <div><b>A tabela foi primeiro</b><p>Sem nenhuma pergunta antes, a escola virou mais uma linha na planilha de comparação de preço.</p></div>
+      <div><b>A proposta ficou no jargão</b><p>"Sociointeracionista" diz tudo para a coordenação e nada para a família.</p></div>
+      <div><b>A visita não teve retorno</b><p>A família saiu animada e nunca mais respondeu, porque ninguém voltou a falar com ela.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>O que tem no guia</h2>
+    <p class="lede">Sete capítulos curtos. Cada um traz a ideia central, o que costuma dar errado e um exercício para aplicar com a equipe na mesma semana.</p>
+    <ol class="chapters">
+      <li><span class="n">1</span><div><b>Onde a matrícula se perde</b><span>Autodiagnóstico de 10 perguntas que mostra por onde começar.</span></div></li>
+      <li><span class="n">2</span><div><b>Responder rápido é o começo, não o fim</b><span>Tempo de resposta com responsabilidade, o teste dos 7 dias e mensagens prontas.</span></div></li>
+      <li><span class="n">3</span><div><b>O primeiro atendimento</b><span>As 5 perguntas para fazer antes de falar de preço, e como apresentar o valor depois.</span></div></li>
+      <li><span class="n">4</span><div><b>Proposta pedagógica sem jargão</b><span>Como traduzir a metodologia para a família, sem prometer o que a sala de aula não entrega.</span></div></li>
+      <li><span class="n">5</span><div><b>Visita, aula experimental e follow-up</b><span>Cadência de acompanhamento e modelos de mensagem que não pressionam.</span></div></li>
+      <li><span class="n">6</span><div><b>Os primeiros 30 dias do aluno</b><span>Passagem de bastão, boas-vindas e os sinais de alerta da evasão.</span></div></li>
+      <li><span class="n">7</span><div><b>Responder não é resolver</b><span>O roteiro de encaminhamento responsável quando o problema não se resolve na hora.</span></div></li>
+      <li><span class="n">+</span><div><b>Kit prático</b><span>Checklists, ficha de passagem de bastão, planilha de controle e 5 indicadores com fórmula.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <blockquote>Experiência do cliente é sobre <em>resolução de problemas</em>.</blockquote>
+    <p>Este guia parte de um princípio simples: atender rápido ajuda, ser simpático ajuda, mas nada disso substitui resolver. Cada capítulo leva a sua equipe a dar o próximo passo com a família, do primeiro contato à renovação.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Para quem é</h2>
+    <p class="lede">Para donos, gestores e coordenadores de escolas, cursos livres, escolas de idiomas e cursos profissionalizantes que querem organizar o atendimento sem comprar sistema caro e sem virar uma operação de vendas agressiva.</p>
+    <div class="facts"><span>Sem jargão de marketing</span><span>Modelos prontos para copiar</span><span>Exercícios para a equipe</span><span>Aplicável na mesma semana</span></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Quem escreveu</h2>
+    <p class="lede"><b>Chaiane Sales Vicente</b>, da Coruja Criativa Tech. Trabalho no cruzamento entre gestão comercial, experiência do cliente, educação e tecnologia, ajudando instituições de ensino a crescer com processo, sem perder o olhar pedagógico.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>Como recebo o ebook?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso ao PDF por e-mail.</p></details>
+      <details><summary>Serve para curso livre e escola de idiomas?</summary><p>Sim. O guia trata do caminho entre o primeiro contato e a matrícula, que é parecido em qualquer instituição de ensino. Os exemplos citam escolas, e os modelos são fáceis de adaptar.</p></details>
+      <details><summary>Preciso de CRM ou de algum sistema?</summary><p>Não. O kit traz uma planilha simples para começar. Se você já usa um CRM, os mesmos campos e etapas valem para ele.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você pode pedir o reembolso em até 7 dias após a compra, direto pela plataforma de pagamento.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Comece pela etapa onde sua escola mais perde famílias</h2>
+    <div class="price"><b>R$ 27</b><span>pagamento único</span></div>
+    <a class="btn buy" href="#" aria-disabled="true">Vendas abrem hoje</a>
+  </div>
+</section>
+
+<footer><div class="wrap">Coruja Criativa Tech · Gestão estratégica de negócios com olhar pedagógico · Instagram @chaisalesvicente<br><span style="font-size:13px;opacity:.85">Chaiane Sales da Silva Vicente · CNPJ 44.715.739/0001-55 · Pernambuco, Brasil · <a href="https://corujacriativatech.com.br/termos/" style="color:inherit">Termos de compra</a> · <a href="https://corujacriativatech.com.br/privacidade/" style="color:inherit">Privacidade</a> · Direito de arrependimento em 7 dias</span></div></footer>
+
+<script>
+const CHECKOUT = "https://pay.kiwify.com.br/TBvIycC";
+document.querySelectorAll('.buy').forEach(a=>{
+  if(CHECKOUT){a.href=CHECKOUT;a.removeAttribute('aria-disabled');a.textContent='Quero o guia por R$ 27';a.target='_blank';a.rel='noopener';}
+  else{a.addEventListener('click',e=>e.preventDefault());}
+});
+</script>
+
+</body></html>
