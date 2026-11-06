@@ -5,6 +5,7 @@
 (function () {
   var C = {
     ga4: 'G-Q6NK00THH8',      // ex.: 'G-XXXXXXXXXX'  (Google Analytics 4)
+    ads: 'AW-18121121128',    // Google Ads (mesma tag gtag, respeita o consentimento)
     pixel: '1422703696346136',    // ex.: '123456789012345' (Meta Pixel)
     clarity: 'z1zgwv0edg'   // ex.: 'abcd1234ef'      (Microsoft Clarity)
   };
@@ -59,6 +60,7 @@
     gtag('consent', 'default', { ad_storage: g, analytics_storage: g, ad_user_data: g, ad_personalization: g, wait_for_update: 500 });
     gtag('js', new Date());
     gtag('config', C.ga4, utm ? { campaign_source: utm.utm_source, campaign_medium: utm.utm_medium, campaign_name: utm.utm_campaign } : {});
+    if (C.ads) gtag('config', C.ads);
     loadScript('https://www.googletagmanager.com/gtag/js?id=' + C.ga4);
   }
 
