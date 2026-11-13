@@ -73,12 +73,28 @@
 <p style="margin-top:20px"><button class="btn" type="submit" id="rxsend">Enviar e receber meu Raio-X</button></p>
 <p class="rx-note" id="rxmsg" style="margin-top:10px"></p></div>
 </form>
-<div class="rx-done" id="rxdone"><div class="kicker">Recebido</div><h2>Seu Raio-X está a caminho.</h2>
-<p class="lead" style="margin:14px auto 0">Confira seu e-mail nos próximos minutos (veja também a caixa de spam ou promoções). Se não chegar em 1 hora, fale com a gente pelo WhatsApp.</p></div>
+<div class="rx-done" id="rxdone"><div class="kicker">Recebido</div><h2>Sua nota geral</h2>
+<div id="rxnota" style="font-family:var(--display);font-weight:700;font-size:96px;line-height:1;margin-top:14px">0</div>
+<p id="rxnivel" style="font-weight:700;font-size:20px;margin-top:6px"></p>
+<div class="rx-bar" style="max-width:420px;margin:18px auto 0;height:12px"><i id="rxnbar"></i></div>
+<p class="lead" id="rxprio" style="margin:26px auto 0"></p>
+<p class="lead" style="margin:14px auto 0">O relatório completo, com a nota de cada área e as 5 ações para esta semana, está a caminho do seu e-mail. Veja também a caixa de spam ou promoções. Se não chegar em 1 hora, fale com a gente pelo WhatsApp.</p>
+<div class="rx-block" style="text-align:left;max-width:560px;margin:32px auto 0"><div class="kicker">Próximo passo</div><h2 id="rxselot" style="font-size:22px"></h2><p class="sub" id="rxselop" style="margin-top:8px"></p>
+<p style="margin-top:16px"><a class="btn" href="/selo/" data-track="raiox_resultado_selo">Conhecer o Selo Escola que Resolve</a></p></div>
+<p class="rx-note" style="margin-top:18px">Esta nota foi calculada no seu navegador com as respostas que você acabou de enviar.</p></div>
 </div></section>
 <script>
 (function(){
 var f=document.getElementById('rx'),K='rx-rascunho';
+var RX={"n": [[0, 39, "Crítico", "#C0392B"], [40, 59, "Atenção", "#E67E22"], [60, 79, "Bom", "#2E86AB"], [80, 100, "Referência", "#1E8449"]], "a": [["Primeiro contato", ["q1", "q2", "q3", "q4"]], ["Visita e conversão", ["q5", "q6", "q7", "q8"]], ["Relacionamento ao longo do ano", ["q9", "q10", "q11", "q12"]], ["Rematrícula", ["q13", "q14", "q15", "q16"]], ["Olhar pedagógico na experiência da família", ["q17", "q18", "q19", "q20"]]]};
+function nivel(n){for(var i=0;i<RX.n.length;i++)if(n>=RX.n[i][0]&&n<=RX.n[i][1])return RX.n[i];return RX.n[0]}
+function resultado(d){var ar=RX.a.map(function(a){var s=0;a[1].forEach(function(q){var v=Number(d[q]);if(!(v>=0&&v<=3))v=0;s+=v});return {nome:a[0],nota:Math.round(s/(a[1].length*3)*100)}});
+var g=Math.round(ar.reduce(function(s,a){return s+a.nota},0)/ar.length),nv=nivel(g),o=ar.slice().sort(function(x,y){return x.nota-y.nota});
+var $=function(i){return document.getElementById(i)};
+$('rxnota').textContent=g;$('rxnota').style.color=nv[3];$('rxnivel').textContent='Nível: '+nv[2];$('rxnivel').style.color=nv[3];$('rxnbar').style.width=Math.max(g,2)+'%';$('rxnbar').style.background=nv[3];
+$('rxprio').textContent='As duas áreas que pedem mais atenção hoje: '+o[0].nome+' e '+o[1].nome+'.';
+if(g>=60){$('rxselot').textContent='Sua escola já tem a nota mínima para entrar no processo do Selo.';$('rxselop').textContent='O Selo Escola que Resolve exige nota 60 no Raio-X para começar. A partir daqui, a avaliação é feita por cliente oculto, com revisão pedagógica.'}
+else{$('rxselot').textContent='O caminho até o Selo começa pelo plano de ação.';$('rxselop').textContent='O Selo Escola que Resolve exige nota 60 no Raio-X para começar. As 5 ações do seu relatório foram escolhidas para subir primeiro as áreas mais fracas.'}}
 function save(){try{var d={};new FormData(f).forEach(function(v,k){d[k]=v});localStorage.setItem(K,JSON.stringify(d))}catch(e){}}
 function prog(){var n=0;for(var i=1;i<=20;i++)if(f.querySelector('input[name=q'+i+']:checked'))n++;document.getElementById('rxbar').style.width=(n*5)+'%';document.getElementById('rxcount').textContent=n+' de 20 respondidas'}
 try{var d=JSON.parse(localStorage.getItem(K)||'{}');Object.keys(d).forEach(function(k){var els=f.elements[k];if(!els)return;if(els.length&&els[0]&&els[0].type==='radio'){for(var j=0;j<els.length;j++)if(els[j].value===d[k])els[j].checked=true}else if(els.type==='checkbox'){}else els.value=d[k]})}catch(e){}
@@ -86,14 +102,14 @@ prog();f.addEventListener('change',function(){save();prog()});f.addEventListener
 f.addEventListener('submit',function(ev){ev.preventDefault();var b=document.getElementById('rxsend');b.disabled=true;b.textContent='Enviando...';
 var d={};new FormData(f).forEach(function(v,k){d[k]=v});
 fetch('https://script.google.com/macros/s/AKfycbyduVRH4daYFbMGZuN2mKr4QH2huPtu8GgF9hZtKVbg_xD7nIkmy-o-H3uUFGtbL4tJ/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
-.then(function(){try{localStorage.removeItem(K)}catch(e){}try{window.dispatchEvent(new Event('rx:enviado'))}catch(e){}f.style.display='none';document.querySelector('.rx-progress').style.display='none';document.getElementById('rxdone').style.display='block';window.scrollTo(0,0)})
+.then(function(){try{localStorage.removeItem(K)}catch(e){}try{window.dispatchEvent(new Event('rx:enviado'))}catch(e){}try{resultado(d)}catch(e){}f.style.display='none';document.querySelector('.rx-progress').style.display='none';document.getElementById('rxdone').style.display='block';window.scrollTo(0,0)})
 .catch(function(){b.disabled=false;b.textContent='Enviar e receber meu Raio-X';document.getElementById('rxmsg').textContent='Não foi possível enviar agora. Verifique sua conexão e tente de novo.'})});
 })();
 </script></main><footer id="rodape"><div class="wrap">
 <div class="cols">
 <div><a class="brand" href="/" style="margin-bottom:14px"><img src="/assets/simbolo-negativo.svg" alt="" width="38" height="38"><span>Coruja Criativa Tech<small>Gestão estratégica de negócios com olhar pedagógico</small></span></a>
 <p style="max-width:380px">Comercial, experiência do cliente, retenção e IA para escolas, cursos livres e escolas de idiomas.</p></div>
-<div><h2 class="fh">Navegue</h2><a href="/raio-x/">Raio-X Digital</a><a href="/selo/">Selo Escola que Resolve</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="https://chaisales.github.io/ebook/">Ebook Da mensagem à matrícula</a><a href="/links/">Links</a><a href="/painel/">Painel da escola</a><a href="/acessibilidade/">Acessibilidade</a></div>
+<div><h2 class="fh">Navegue</h2><a href="/raio-x/">Raio-X Digital</a><a href="/selo/">Selo Escola que Resolve</a><a href="/loja/">Loja</a><a href="/servicos/">Serviços</a><a href="/sobre/">Sobre</a><a href="/blog/">Blog</a><a href="/radar-2027/">Radar 2027</a><a href="/perguntas/">Perguntas frequentes</a><a href="https://chaisales.github.io/ebook/">Ebook Da mensagem à matrícula</a><a href="/links/">Links</a><a href="/painel/">Painel da escola</a><a href="/acessibilidade/">Acessibilidade</a></div>
 <div><h2 class="fh">Contato</h2><a href="https://wa.me/5581999455944?text=Ol%C3%A1%2C%20Chaiane!%20Vim%20pelo%20site%20da%20Coruja%20Criativa%20Tech%20e%20quero%20conversar%20sobre%20a%20minha%20institui%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp: (81) 99945-5944</a><a href="mailto:chaianesv@corujacriativatech.com.br">chaianesv@corujacriativatech.com.br</a><a href="https://www.instagram.com/chaisalesvicente/" target="_blank" rel="noopener">Instagram @chaisalesvicente</a><a href="https://www.linkedin.com/in/chaianesales/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.google.com/maps/place/Coruja+Criativa+Tech/@-8.0112617,-34.978105,17z" target="_blank" rel="noopener">Google Maps</a></div>
 </div>
 <div class="legal"><span>© 2026 Coruja Criativa Tech · Chaiane Sales da Silva Vicente · CNPJ 44.715.739/0001-55 · Pernambuco, Brasil</span><span><a href="/termos/">Termos</a> · <a href="/privacidade/">Privacidade</a> · <a href="/acessibilidade/">Acessibilidade</a> · <a href="#" onclick="window.corujaCookies&&corujaCookies();return false">Cookies</a> · Atendimento online para todo o Brasil</span></div>
