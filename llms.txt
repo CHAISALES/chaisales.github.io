@@ -24,6 +24,7 @@ A Coruja Criativa Tech ajuda instituições de ensino a transformar atendimento 
 - [Ebook Da mensagem à matrícula](https://chaisales.github.io/ebook/): guia prático (R$ 27) para escolas pararem de perder famílias entre a primeira mensagem e a matrícula.
 
 ## Artigos
+- [Testamos o Selo antes de lançar: as objeções que apareceram e o que mudamos](https://corujacriativatech.com.br/blog/testamos-o-selo-antes-de-lancar/): Antes de abrir a turma piloto, colocamos 60 perfis de escola simulados com IA para ler nossas páginas e e-mails. As objeções mudaram regras do Selo, do Raio-X e o jeito de abordar as escolas.
 - [Rematrícula é a nova captação: o que a queda de matrículas diz para escolas particulares](https://corujacriativatech.com.br/blog/rematricula-e-a-nova-captacao/): O Censo Escolar 2025 mostrou menos alunos na educação básica privada. Para quem gere escola, isso muda a conta: cada família que fica vale mais do que nunca.
 - [Sua escola aparece quando a família pergunta para a IA?](https://corujacriativatech.com.br/blog/sua-escola-aparece-na-ia/): As famílias já pesquisam escola no Instagram, no TikTok e em assistentes de IA. Entenda o que é GEO e como preparar a presença digital da sua instituição.
 - [Agente de IA no WhatsApp: vale a pena para escolas e cursos?](https://corujacriativatech.com.br/blog/agente-de-ia-no-whatsapp-para-escolas/): Grandes grupos educacionais já usam agentes de IA para atender e qualificar interessados. O que isso significa para instituições de médio e pequeno porte, e por onde começar.
