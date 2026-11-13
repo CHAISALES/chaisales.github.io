@@ -15,7 +15,7 @@ A Coruja Criativa Tech ajuda instituições de ensino a transformar atendimento 
 - Mentoria para gestores: Acompanhamento estratégico para diretores e mantenedores que querem decidir com dados e método.
 
 ## Produtos
-- [Selo Escola que Resolve](https://corujacriativatech.com.br/selo/): certificação por cliente oculto e revisão pedagógica, em 5 critérios (tempo de resposta, resolução, seguimento, visita e primeiro mês). Não se compra: a escola pode reprovar. Vale 12 meses. R$ 1.990 (até 300 alunos) ou R$ 2.990.
+- [Selo Escola que Resolve](https://corujacriativatech.com.br/selo/): certificação por cliente oculto e revisão pedagógica, em 5 critérios (tempo de resposta, resolução, seguimento, visita e primeiro mês). Não se compra: a escola pode reprovar. Vale 12 meses. R$ 1.990 (até 300 alunos) ou R$ 2.990. Turma piloto 2027: avaliação gratuita para 5 escolas.
 - [Raio-X Digital](https://corujacriativatech.com.br/raio-x/): diagnóstico online do atendimento e da rematrícula em 5 áreas, com relatório por e-mail e 5 ações (R$ 97). É o primeiro passo para o Selo.
 
 ## Referência
